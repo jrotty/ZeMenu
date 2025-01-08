@@ -1,3 +1,24 @@
+#zemenu{
+    position: relative;
+    padding: 8px;
+}
+#zemenu:after {
+    position: absolute;
+    content: " \83dc\5355\533a ";
+    color: #ccc;
+    background: #fff;
+    display: flex
+;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+.dark #zemenu:after {
+    color: #8a8a8a;
+    background: #101928;
+}
+
 .zemenu button {
     border: none;
     background-color: #467B96;
