@@ -1,0 +1,74 @@
+.zemenu button {
+    border: none;
+    background-color: #467B96;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #FFF;
+    margin: 0 1px;
+}
+#menudialog {
+    border: 1px solid #ccc;
+}
+#menudialog button.cloase {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 2rem;
+    border: none;
+    background: transparent;
+    color: red;
+    margin-right: 0;
+    cursor: pointer;
+    padding: 0;
+}
+#menudialog button.cloase svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.zemenu .zemenu-item {
+    position: relative;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 1rem;
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 1;
+    border: 1px solid #ccc;
+}
+.dark .zemenu-item {
+    background: #1f2a38;
+    border: 1px solid #000617;
+}
+.zemenu .zemenu-item .son {
+    background: #f6f6f6;
+    min-height: 1em;
+    padding: 5px;
+    margin-left: 1em;
+    display: none;
+}
+.dark .zemenu .zemenu-item .son {
+    background: #3a3a3a;
+}
+.zemenu .flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.zemenu .zemenu-item button{
+    display: none;
+}
+.zemenu .okmenu .zemenu-item .son{
+    display: block;
+}
+.zemenu .okmenu .zemenu-item button{
+    display: inline-flex;
+}
+.zemenu .okmenu .zemenu-item .son .son{
+    display: none;
+}
+.zemenu .zemenu-item a{
+    margin-left:5px;
+}
