@@ -15,6 +15,10 @@ $nemuarray=ZeMenu_Plugin::zemenu();
 }
  ?>
 ```
+如何判断菜单是否处于`active`状态？通过判断链接即可实现，如下即可获取当前页面网址，然后判断菜单链接和它是否一致然后在为其追加`active`的`class`
+```
+$thisPageUrl=$this->request->getRequestUrl();
+```
 
 ### 支持
 
