@@ -7,7 +7,7 @@
 菜单内部顺序也支持上下拖拽，且支持二级分类
 
 ### 主题适配
-如下，先判断插件是否激活，激活了就获取菜单数组，然后自行遍历数组适配自己主题即可。
+如下，先判断插件是否激活，激活了就获取菜单数组，自行遍历数组适配自己主题即可。
 ```
 <?php
 if (array_key_exists('ZeMenu', Typecho_Plugin::export()['activated'])){
@@ -15,7 +15,7 @@ $nemuarray=ZeMenu_Plugin::zemenu();
 }
  ?>
 ```
-如何判断菜单是否处于`active`状态？通过判断链接即可实现，如下即可获取当前页面网址，然后判断菜单链接和它是否一致然后在为其追加`active`的`class`
+如何判断菜单是否处于`active`状态？通过判断链接即可实现，如下即可获取当前页面网址，然后判断菜单链接和它是否一致最后在为其追加`active`的`class`
 ```
 $thisPageUrl=$this->request->getRequestUrl();
 ```
