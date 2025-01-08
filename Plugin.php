@@ -15,7 +15,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 }
 
 /**
- * 简单的菜单自定义插件,调用方法如：<code>&lt?php if (array_key_exists('ZeMenu', Typecho_Plugin::export()['activated'])){$nemuarray=ZeMenu_Plugin::zemenu(); } ?&gt</code>
+ * 简单的主题菜单自定义插件，需要主题自行适配
  *
  * @package ZeMenu
  * @author 泽泽社长
