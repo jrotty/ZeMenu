@@ -31,14 +31,14 @@ $button='<div><button onclick="menu.dialog(this)">编辑</button><button onclick
 $son='<div x-sort="menu.sort" class="son" x-sort x-sort:group="zemenu"></div>';
 ?>
 
-<link href="<?php echo $url; ?>style.css" rel="stylesheet">
+<link href="<?php echo $url; ?>style.css?2025" rel="stylesheet">
 <div class="main zemenu" x-data>
 <div class="container">
-<div class="row">
+<div class="zemenugrid">
     
     
    
-<div class="col-mb-12 col-tb-6 mb-10">
+<div>
 <div class="flex-between">
 <h2>菜单</h2><button @click="menu.dialog()">添加</button></div>
 <div id="zemenu" class="typecho-page-main okmenu" x-sort="menu.sort" x-sort:group="zemenu">
@@ -63,7 +63,7 @@ foreach ($result as $val){
  
  
  
-<div class="col-mb-12 col-tb-6 mb-10">
+<div>
 <h2>独立页面</h2>
 <div class="typecho-page-main" x-sort x-sort:config="{group:{name: 'zemenu',pull: 'clone', put: false}}">
     <div class="zemenu-item" :id="$id('text-input')" x-sort:item><div class="flex-between"><a data-name="网站首页" data-a="<?php Helper::options()->siteUrl() ?>" data-icon="" data-blank="0" href="<?php Helper::options()->siteUrl() ?>" target="_blank" title="首页">网站首页</a><?php echo $button;?></div><?php echo $son;?></div>

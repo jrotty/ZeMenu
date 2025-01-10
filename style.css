@@ -1,6 +1,8 @@
 #zemenu{
     position: relative;
     padding: 8px;
+    height: 100%;
+    min-height: 100px;
 }
 #zemenu:after {
     position: absolute;
@@ -92,4 +94,14 @@
 }
 .zemenu .zemenu-item a{
     margin-left:5px;
+}
+.zemenugrid{
+    overflow: hidden;
+    gap: 1.25rem;
+}
+@media (min-width: 768px) {
+    .zemenugrid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
