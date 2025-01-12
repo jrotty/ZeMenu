@@ -19,7 +19,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
  *
  * @package ZeMenu
  * @author 泽泽社长
- * @version 0.8.1
+ * @version 0.8.2
  * @link https://store.typecho.work/
  */
 class Plugin implements PluginInterface
@@ -37,8 +37,8 @@ class Plugin implements PluginInterface
     }
     public static function zemenu() {
         $db= Db::get();
-        $query= $db->fetchAll($db->select('value')->from('table.options')->where('name = ?','zemenu'));
-        $result = json_decode($query[0]['value'], true);
+        $query= $db->fetchRow($db->select('value')->from('table.options')->where('name = ?','zemenu'));
+        $result = json_decode($query['value'], true);
         return $result;
         
     }
