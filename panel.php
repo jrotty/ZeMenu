@@ -6,8 +6,7 @@ if(isset($_REQUEST['add'])&&$_REQUEST['add']=='menu'){
     $json = file_get_contents('php://input');
     $insert = $db->update('table.options')->where('name = ?','zemenu')
     ->rows(array('value' => $json));
-    //将构建好的sql执行, 如果你的主键id是自增型的还会返回insert id
-    $insertId = $db->query($insert);
+    $db->query($insert);
     throwJson(array('status' => '1', 'info' => '已保存！'));
 }
 
@@ -19,8 +18,7 @@ if(!empty($query)&&!empty($query['value'])){
 }else{
 $insert = $db->insert('table.options')
     ->rows(array('name' => 'zemenu', 'user' => 0, 'value' => ''));
-//将构建好的sql执行, 如果你的主键id是自增型的还会返回insert id
-$insertId = $db->query($insert);
+    $db->query($insert);
 }
 
 
