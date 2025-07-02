@@ -12,12 +12,12 @@ if(isset($_REQUEST['add'])&&$_REQUEST['add']=='menu'){
 
 $result = [];
 $query= $db->fetchRow($db->select('value')->from('table.options')->where('name = ?','zemenu'));
-if(!empty($query)&&!empty($query['value'])){
-
+if(!empty($query)){
+    $query['value']= empty($query['value']) ? '' : $query['value'];
     $result = json_decode($query['value'], true);
 }else{
 $insert = $db->insert('table.options')
-    ->rows(array('name' => 'zemenu', 'user' => 0, 'value' => ''));
+    ->rows(array('name' => 'zemenu', 'user' => 0, 'value' => '[]'));
 $insertId = $db->query($insert);
 }
 

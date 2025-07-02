@@ -19,7 +19,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
  *
  * @package ZeMenu
  * @author 泽泽社长
- * @version 0.8.3
+ * @version 0.8.4
  * @link https://store.typecho.work/
  */
 class Plugin implements PluginInterface
